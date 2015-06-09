@@ -1,0 +1,65 @@
+/* About page
+-------------------------------------------------- */
+
+nav a:hover {
+  background: #ff221c;
+  color: #fff;
+  cursor: pointer;
+}
+
+nav a.art-handler {
+  background: #fff;
+  color: #ff221c;
+}
+
+nav a.art-handler:hover {
+  background: #ff221c;
+  color: #fff;
+}
+    
+textarea, input { outline: none; -webkit-appearance: none; border-radius: 0; }
+
+input {
+  font-size: 1em;
+  font-family: font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #fff;
+}
+
+input#mce-EMAIL {
+  background: #ff221c;
+  border: 1px solid #fff;
+  margin: 1em 0;
+  width: 100%;
+}
+
+input#mc-embedded-subscribe {
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: none;
+  cursor: pointer;
+  margin-bottom: 1em;
+}
+
+input#mc-embedded-subscribe:hover {
+  background: #fff;
+  color: #ff221c;
+}
+
+div.mce_inline_error {
+  font-family: font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  background-color: #ff221c !important;
+  padding: 0 !important;
+  margin-right: 10px;
+  font-weight: normal !important;
+  color: #fff !important;
+  margin-bottom: 0.75em;
+}
+
+#mc_embed_signup input.mce_inline_error {
+  border: 1px solid #fff !important;
+}
+
+#mce-success-response {
+  margin-bottom: 0.75em;
+}

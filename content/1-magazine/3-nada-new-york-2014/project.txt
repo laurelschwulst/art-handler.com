@@ -1,0 +1,38 @@
+Title: NADA & Frieze, New York, 2014
+
+----
+
+Text: 
+
+(image: frieze01.jpg class:small)
+(image: frieze02.jpg class:small)
+(image: frieze03.jpg class:small)
+(image: frieze04.jpg class:small)
+(image: frieze05.jpg class:small)
+(image: frieze06.jpg class:small)
+(image: frieze07.jpg class:small)
+
+(image: nada01.jpg class:small)
+(image: nada02.jpg class:small)
+(image: nada03.jpg class:small)
+(image: nada04.jpg class:small)
+(image: nada05.jpg class:small)
+(image: nada06.jpg class:small)
+(image: nada07.jpg class:small)
+(image: nada08.jpg class:small)
+
+----
+
+Author: Maayan Strauss
+
+----
+
+Postimage: cover.jpg
+
+----
+
+Type: photo essay
+
+----
+
+Issue: 1

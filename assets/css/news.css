@@ -1,0 +1,61 @@
+/* News page
+-------------------------------------------------- */
+
+nav a:hover {
+  background: #ff221c;
+  color: #fff;
+  cursor: pointer;
+}
+
+nav a.art-handler {
+  background: #fff;
+  color: #ff221c;
+}
+
+nav a.art-handler:hover {
+  background: #ff221c;
+  color: #fff;
+}
+
+.news-title {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  height: 42px;
+}
+
+.news-block h2.title {
+  position: absolute;
+  left: 0;
+}
+
+.news-block .news-date {
+  position: absolute;
+  right: 0;
+  text-align: right;
+  font-size: 36px;
+}
+
+.news-block h2 {
+  font-size: 36px !important;
+  color: #fff !important;
+  font-weight: normal;
+  text-transform: uppercase !important;
+  margin-top: 0 !important;
+  text-align: left;
+  text-transform: none;
+  cursor: pointer;
+}
+
+.news-block h2:hover {
+  background: auto;
+}
+
+.news-block .content {
+  display: none;
+}
+
+.news-block .text-block {
+  margin-top: 1em;
+}

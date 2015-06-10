@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
   $('.news-title').click(function(){
-    $('.news-block .content').slideToggle('fast');
+    $(this).siblings('.content').slideToggle('fast');
   });
 
   var small_images = $('figure.small img');

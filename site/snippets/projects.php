@@ -20,7 +20,7 @@
         ?>
 
         <div class="image">
-          <img src="<?php echo $postimage->url(); ?>" />
+          <?php echo thumb($postimage, array('width' => 650)) ?>
         </div>
 
       <?php endif ?>

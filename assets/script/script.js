@@ -46,13 +46,13 @@ $(document).ready(function(){
   $('.marquee.four').children().attr("scrollamount", randomSpeedFour);
   $('.marquee.five').children().attr("scrollamount", randomSpeedFive);
 
-  // $("body.article").jScrollPane(
-  //   {
-  //     verticalDragMinHeight: 62,
-  //     verticalDragMaxHeight: 62,
-  //     horizontalDragMinWidth: 20,
-  //     horizontalDragMaxWidth: 20
-  //   }
-  // );
+  $("body.article").jScrollPane(
+    {
+      verticalDragMinHeight: 82,
+      verticalDragMaxHeight: 82,
+      horizontalDragMinWidth: 20,
+      horizontalDragMaxWidth: 20
+    }
+  );
 
 });

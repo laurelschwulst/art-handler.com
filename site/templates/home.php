@@ -1,15 +1,33 @@
 <body class="home gradient">
 
   <?php snippet('header') ?>
-
     <main>
 
       <div class="image-container-one">
         <div class="image-container-two">
-          <img class="special-image" src="content/1-magazine/4-art-in-transit-carrying-case-for-andy-warhol-pillow/pillow.png">
+          <?php foreach(page('magazine')->children()->filterBy('featured', '1', ',')->shuffle()->limit(1) as $project): ?>
+            <a href="<?php echo $project->url() ?>">
+
+              <?php if($project->postimage()): ?>
+
+              <?php
+              $filename = $project->postimage();
+              $postimage = $project->files()->find($filename);
+              ?>
+
+              <img class="special-image" src="<?php echo $postimage->url(); ?>" />
+
+            <?php endif ?>
+
+          </a>
+        <?php endforeach ?>
         </div>
       </div>
 
+
+
+
+      
       <div id="marquees">
         <div class="marquee one">
           <marquee>A new magazine on the practice of moving art</marquee>
@@ -31,6 +49,7 @@
           <marquee>A new magazine on the practice of moving art</marquee>
         </div>
       </div>
+    -->
 
       <div class="top-bar"></div>
       <div class="bottom-bar"></div>

@@ -5,17 +5,24 @@ body:after {
 }
 
 .lightboxOverlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
   z-index: 9999;
-  background-color: #000;
+  background-color: #fff;
+  opacity: 1;
   display: none;
 }
 
 .lightbox {
-  position: absolute;
+  position: fixed;
   left: 0;
+  top:0!important;
+  bottom: 0;
+  right:0;
+  height: 100%;
   width: 100%;
   z-index: 10000;
   text-align: center;
@@ -24,9 +31,12 @@ body:after {
 }
 
 .lightbox .lb-image {
-  display: block;
-  height: auto;
+  display:inline-block!important;
   max-width: inherit;
+  height: 100%!important; // Fallback
+  height: 100vh!important;
+  width: auto!important;
+
 }
 
 .lightbox a img {
@@ -34,16 +44,13 @@ body:after {
 }
 
 .lb-outerContainer {
-  position: relative;
-  *zoom: 1;
-  width: 250px;
-  height: 250px;
+  position: fixed;
+  top: 0;
+  width: 100%!important;
+  height: 100%!important;
   margin: 0 auto;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
+  left: 0;
+  right: 0;
 }
 
 .lb-outerContainer:after {
@@ -53,10 +60,18 @@ body:after {
 }
 
 .lb-container {
-  padding: 4px;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
 }
 
+
 .lb-loader {
+  display: block;
   position: absolute;
   top: 43%;
   left: 0;
@@ -99,12 +114,10 @@ body:after {
 }
 
 .lb-nav a.lb-prev {
-  width: 34%;
+  width: 20%;
   left: 0;
   float: left;
-  background: url(../images/prev.png) left 48% no-repeat;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
+  background: url(../images/leftarrow.svg) left 48% no-repeat;
   -webkit-transition: opacity 0.6s;
   -moz-transition: opacity 0.6s;
   -o-transition: opacity 0.6s;
@@ -112,21 +125,13 @@ body:after {
 }
 
 .lb-nav a.lb-prev:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
 }
 
 .lb-nav a.lb-next {
-  width: 64%;
+  width: 20%;
   right: 0;
   float: right;
-  background: url(../images/next.png) right 48% no-repeat;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  -webkit-transition: opacity 0.6s;
-  -moz-transition: opacity 0.6s;
-  -o-transition: opacity 0.6s;
-  transition: opacity 0.6s;
+  background: url(../images/rightarrow.svg) right 48% no-repeat;
 }
 
 .lb-nav a.lb-next:hover {
@@ -139,12 +144,6 @@ body:after {
   padding-top: 5px;
   *zoom: 1;
   width: 100%;
-  -moz-border-radius-bottomleft: 4px;
-  -webkit-border-bottom-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  -moz-border-radius-bottomright: 4px;
-  -webkit-border-bottom-right-radius: 4px;
-  border-bottom-right-radius: 4px;
 }
 
 .lb-dataContainer:after {
@@ -188,7 +187,6 @@ body:after {
   background: url(../images/close.png) top right no-repeat;
   text-align: right;
   outline: none;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity: 0.7;
   -webkit-transition: opacity 0.2s;
   -moz-transition: opacity 0.2s;

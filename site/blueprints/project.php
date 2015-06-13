@@ -28,6 +28,10 @@ fields:
       photo essay: Photo Essay
       project: Project
     columns: 3
+  featured:
+    label: Feature
+    type: checkbox
+    text: Featured
   postimage:
     label:  Square Thumbnail Image
     type:   selector

@@ -37,3 +37,7 @@ Type: article
 ----
 
 Postimage: pillow-cover.png
+
+----
+
+Featured: 1

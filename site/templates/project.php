@@ -1,4 +1,4 @@
-<?php snippet('header') ?>
+<?php snippet('header-article') ?>
 
   <div class="breadcrumb">
     <a href="../index.php">ART HANDLER</a> /

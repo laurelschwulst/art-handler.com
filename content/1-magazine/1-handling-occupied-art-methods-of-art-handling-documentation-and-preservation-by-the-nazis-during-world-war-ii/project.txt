@@ -30,3 +30,7 @@ Type: article
 ----
 
 Issue: 1
+
+----
+
+Featured: 1

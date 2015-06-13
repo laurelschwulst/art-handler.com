@@ -798,22 +798,23 @@ ul.magazine-block {
 }
 
 .jspTrack {
-  background: #fff !important;
+  background: rgba(255,255,255, 0); !important;
 }
 
 .jspDrag {
   background: #ff221c !important;
+  height:62px!important;
+
 }
 
-.jspVerticalBar {
-  top: 10px !important;
-  right: 10px !important;
-  bottom: 10px !important;
+body
+{
+  width: 100%;
+  height: 100%; 
+  height: 100vh;
+  overflow: auto;
 }
 
-.jspVerticalBar {
-  width: 62px !important;
-}
 
 /* Other pages 
 -------------------------------------------------- */

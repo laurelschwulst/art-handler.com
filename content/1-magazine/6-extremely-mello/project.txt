@@ -79,3 +79,7 @@ Postimage: ah02-cover.png
 ----
 
 Issue: 1
+
+----
+
+Featured: 1

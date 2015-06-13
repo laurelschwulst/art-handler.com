@@ -36,3 +36,7 @@ Type: photo essay
 ----
 
 Issue: 1
+
+----
+
+Featured: 1

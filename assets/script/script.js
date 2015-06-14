@@ -1,8 +1,13 @@
 $(document).ready(function(){
 
+  /* News item accordion */
+
   $('.news-title').click(function(){
     $(this).siblings('.content').slideToggle('fast');
   });
+
+
+  /* Small images in articles and lightbox */
 
   var small_images = $('figure.small img');
 
@@ -16,11 +21,15 @@ $(document).ready(function(){
 
   $(small_image_containers).each(function(){
     var caption = $(this).children('figcaption').html();
-    console.log(caption);
     var link = $(this).children('a');
     $(link).attr('data-title', caption);
   });
 
+  var last_small_image = $('figure.small').last();
+  $('<div class="clearer"></div>').insertAfter(last_small_image);
+
+
+  /* Homepage  marquees */
 
   var randomPercentOne = Math.floor(Math.random()*100);
   var randomPercentTwo = Math.floor(Math.random()*100);
@@ -46,7 +55,10 @@ $(document).ready(function(){
   $('.marquee.four').children().attr("scrollamount", randomSpeedFour);
   $('.marquee.five').children().attr("scrollamount", randomSpeedFive);
 
-  $("body.article").jScrollPane(
+
+  /* Article scrollbar */
+
+  $('body.article').jScrollPane(
     {
       verticalDragMinHeight: 82,
       verticalDragMaxHeight: 82,
@@ -54,5 +66,13 @@ $(document).ready(function(){
       horizontalDragMaxWidth: 20
     }
   );
+
+
+  /* Article "back to top" link */
+
+  $('#back-to-top').click(function() {
+    console.log('hi');
+    $('#top').ScrollTo();
+  });
 
 });

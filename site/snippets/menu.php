@@ -1,6 +1,7 @@
-<nav role="navigation">
+<nav role="navigation" id="top">
 
   <ul class="menu cf">
+
     <a href="index.php" class="art-handler">ART HANDLER</a>
     <?php foreach($pages->visible() as $p): ?>
     <li>

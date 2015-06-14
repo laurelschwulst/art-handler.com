@@ -297,13 +297,14 @@ h1 a, h2 a, h3 a, h4 a {
 /* Next/Prev nav
 -------------------------------------------------- */
 .nextprev {
-  padding: 1em 0;
+  padding: 0;
+  margin: 0;
 }
 .nextprev a {
   border: 0;
 }
 .nextprev .prev {
-  float: left;
+  float: right;
 }
 .nextprev .next {
   float: right;
@@ -481,11 +482,11 @@ nav ul {
   padding: 0;
   padding-left: 10px;
   margin-top: 10px;
+  margin-right: 10px;
 }
 
 nav a {
   color: #ff221c;
-  /*color: #aaa;*/
   text-decoration: none;
   display: block;
   text-align: center;
@@ -493,7 +494,6 @@ nav a {
   padding: 10px 16px;
   background: none;
   height: 62px;
-  display: block;
 }
 
 nav a:hover {
@@ -512,6 +512,36 @@ nav a.art-handler {
 nav a.current {
   background: #ff221c;
   color: white;
+}
+
+nav a.next, nav a.prev {
+  float: right;
+}
+
+.nextprev {
+  margin-right: 62px;
+}
+
+#back-to-top {
+  height: 62px;
+  font-size: 36px;
+  color: #ff221c;
+  text-decoration: none;
+  padding: 10px 16px;
+  background: none;
+  cursor: pointer;
+}
+
+#back-to-top:hover {
+  color: #fff;
+  background: #ff221c;
+}
+
+.article-footer {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-top: 120px;
 }
 
 ul#social {
@@ -630,7 +660,7 @@ ul.magazine-block {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   position: relative;
-  transition: all .2s ease-in-out;
+  /*transition: all .2s ease-in-out;*/
 }
 
 .article-container {
@@ -733,6 +763,58 @@ ul.magazine-block {
   max-height: 100%;
 }
 
+
+/* News */
+
+.news-title {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  height: 62px;
+  padding-top: 4px;
+}
+
+.news-block {
+}
+
+.news-block h2.title {
+  position: absolute;
+  left: 0;
+  white-space: nowrap;
+}
+
+.news-block .news-date {
+  position: absolute;
+  right: 0;
+  text-align: right;
+  font-size: 36px;
+}
+
+.news-block h2 {
+  font-size: 36px !important;
+  color: #fff !important;
+  font-weight: normal;
+  text-transform: uppercase !important;
+  margin-top: 0 !important;
+  text-align: left;
+  text-transform: none;
+  cursor: pointer;
+}
+
+.news-block h2:hover {
+  background: auto;
+}
+
+.news-block .content {
+  display: none;
+}
+
+.news-block .text-block {
+  margin: 0.5em 0 2em;
+}
+
+
 /* Individual article
 -------------------------------------------------- */
 
@@ -751,8 +833,8 @@ ul.magazine-block {
 
 .article h1 {
   font-size: 120px;
-  line-height: 1;
-  margin: 54px 72px 0;
+  line-height: 1.1;
+  margin: 144px 134px 0;
   text-align: center;
   color: #000;
 }
@@ -761,20 +843,6 @@ ul.magazine-block {
   display: none;
   width: 100%;
   text-align: center;
-}
-
-.article nav {
-  display: none;
-}
-
-.breadcrumb {
-  margin: 10px;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.breadcrumb a {
-  color: #ff221c;
 }
 
 .scroll-pane {
@@ -807,8 +875,7 @@ ul.magazine-block {
 
 }
 
-body
-{
+body {
   width: 100%;
   height: 100%; 
   height: 100vh;
@@ -859,11 +926,11 @@ body
 .article-container p {
   color: #fff;
   font-size: 24px;
-  width: 640px;
+  max-width: 640px;
 }
 
 .article-container blockquote p {
-  width: auto;
+  max-width: 100%;
   margin: 1em 72px;
   font-size: 64px;
   text-align: center;
@@ -939,29 +1006,107 @@ body
 /* Media queries
 -------------------------------------------------- */
 
+@media screen and (max-width: 1126px) {
+
+  nav, nav a { height: auto; }
+
+  .content-block h2,
+  nav,
+  .news-block h2,
+  .news-block .news-date,
+  #back-to-top {
+    font-size: 28px !important;
+  }
+
+  #back-to-top {
+    height: 52px;
+  }
+
+  .news-title {
+    height: 52px;
+    padding-top: 8px;
+  }
+
+  .content-block h1,
+  .magazine-block h1,
+  .article h1 {
+    font-size: 72px;
+  }
+
+  ul.magazine-block,
+  .content-block {
+    margin-top: 62px;
+  }
+
+  .nextprev {
+    margin-right: 52px;
+  }
+
+  .col-one-quarter,
+  .small {
+    width: 33.333333%;
+  }
+
+  .text-block,
+  .article-container p {
+    font-size: 21px;
+  }
+
+}
+
+@media screen and (max-width: 950px) {
+
+  .nextprev { display: none; }
+
+}
+
 @media screen and (max-width: 824px) {
+
+  .col-one-quarter,
+  .small {
+    width: 50%;
+  }
+
+  nav #social {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 700px) {
+
+  nav a {
+    float: none;
+    text-align: left;
+  }
 
   .marquee { display: none; }
 
-  .text-block {
-    max-width: 100%;
+  ul.magazine-block,
+  .content-block,
+  .image-container-two {
+    margin-top: 270px;
+  }
+
+  main.article {
+    margin-top: 310px;
+  }
+
+  .article h1 {
+    font-size: 54px;
+    margin: auto;
+    margin-top: 1em;
   }
 
 }
 
 @media screen and (max-width: 600px) {
 
-  nav, nav a { height: auto; }
-
-  .content-block {
-    margin-top: 64px;
+  .news-date {
+    display: none;
   }
+}
 
-  .content-block h2, nav {
-    font-size: 28px;
-  }
+@media screen and (max-width: 500px) {
 
-  .text-block {
-    font-size: 18px;
-  }
 }

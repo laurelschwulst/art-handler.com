@@ -1,6 +1,8 @@
-nav { display: none; }
+header nav {
+  z-index: 9;
+}
 
-/*nav #social { display: none; }
+nav #social { display: none; }
 
 nav a.current {
   background: #fff;
@@ -21,4 +23,4 @@ nav a.art-handler {
 nav a.art-handler:hover {
   background: #ff221c;
   color: #fff;
-}*/
+}

@@ -46,7 +46,6 @@ body:after {
 .lb-outerContainer {
   position: fixed;
   top: 0;
-  width: 100%!important;
   height: 100%!important;
   margin: 0 auto;
   left: 0;
@@ -61,8 +60,7 @@ body:after {
 
 .lb-container {
   height: 100%;
-  position: fixed;
-  width: 100%;
+  position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
@@ -90,12 +88,6 @@ body:after {
 }
 
 .lb-nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 10;
 }
 
 .lb-container > .nav {
@@ -114,21 +106,19 @@ body:after {
 }
 
 .lb-nav a.lb-prev {
-  width: 20%;
+  position: fixed;
+  width: 125px;
   left: 0;
   float: left;
   background: url(../images/leftarrow.svg) left 48% no-repeat;
-  -webkit-transition: opacity 0.6s;
-  -moz-transition: opacity 0.6s;
-  -o-transition: opacity 0.6s;
-  transition: opacity 0.6s;
 }
 
 .lb-nav a.lb-prev:hover {
 }
 
 .lb-nav a.lb-next {
-  width: 20%;
+  position: fixed;
+  width: 125px;
   right: 0;
   float: right;
   background: url(../images/rightarrow.svg) right 48% no-repeat;
@@ -140,10 +130,10 @@ body:after {
 }
 
 .lb-dataContainer {
-  margin: 0 auto;
-  padding-top: 5px;
   *zoom: 1;
   width: 100%;
+  width: 100%!important;
+  background-color: red;
 }
 
 .lb-dataContainer:after {
@@ -158,17 +148,22 @@ body:after {
 }
 
 .lb-data .lb-details {
-  width: 85%;
   float: left;
   text-align: left;
   line-height: 1.1em;
+  position: fixed;
+  padding: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
 }
 
 .lb-data .lb-caption {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: normal;
   line-height: 1.2;
-  color: #fff;
+  color: #ff221c;
+
 }
 
 .lb-data .lb-number {

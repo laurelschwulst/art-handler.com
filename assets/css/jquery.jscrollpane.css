@@ -14,7 +14,7 @@
 .jspPane
 {
 	position: absolute;
-	width: auto!important;
+	width: 100%!important;
 }
 
 
@@ -35,11 +35,7 @@
   bottom: 0px !important;
 }
 
-.jspVerticalBar {
-  width: 82px !important;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0);
-}
+
 
 .jspHorizontalBar
 {

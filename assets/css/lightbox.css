@@ -81,11 +81,16 @@ body:after {
 
 .lb-cancel {
   display: block;
-  width: 32px;
-  height: 32px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 62px;
+  height: 62px;
   margin: 0 auto;
-  background: url(../images/loading.gif) no-repeat;
+  background: url(../images/close.gif) no-repeat!important;
 }
+
+
 
 .lb-nav {
 }

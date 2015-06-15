@@ -20,10 +20,11 @@
 
   echo js('http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js');
   echo js('assets/script/jquery.mousewheel.js');
-  echo js('assets/script/jquery.jscrollpane.js');
-  echo js('assets/script/jquery-scrollto.js');
+  // echo js('assets/script/jquery-scrollto.js');
   echo js('assets/script/script.js');
+  echo js('assets/script/article-script.js');
   echo js('assets/script/lightbox.js');
+  // echo js('assets/script/jquery.jscrollpane.js');
   ?>
 
 </head>

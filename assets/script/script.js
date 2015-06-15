@@ -58,21 +58,12 @@ $(document).ready(function(){
 
   /* Article scrollbar */
 
-  $('body.article').jScrollPane(
-    {
-      verticalDragMinHeight: 82,
-      verticalDragMaxHeight: 82,
-      horizontalDragMinWidth: 20,
-      horizontalDragMaxWidth: 20
-    }
-  );
-
 
   /* Article "back to top" link */
-
   $('#back-to-top').click(function() {
     console.log('hi');
-    $('#top').ScrollTo();
+    $('.jspPane').animate({ top: '0'}, 800);
+    $('.jspDrag').animate({ top: '0'}, 800);
   });
 
 });

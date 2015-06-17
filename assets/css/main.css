@@ -644,31 +644,35 @@ ul.magazine-block {
   float: none;
   display: inline-block;
   vertical-align: top;
-  margin-right: -5.5px;
+  margin-right: -5.5px !important;
 }
 
 .small.centered {
   float: none;
   display: block;
-  margin: 0 auto;
+  margin: 2em auto !important;
 }
 
 .article-container {
   margin: 5px;
 }
 
+.article-container figure {
+  max-width: 780px;
+  margin: 2em auto;
+}
+
+.article-container figure.large {
+  max-width: 100%;
+}
+
+.article-container figure.small {
+  max-width: 25%;
+}
+
 .article-container img {
   max-width: 780px;
   padding: 5px;
-  margin: 0 auto;
-}
-
-.article-container .small {
-  margin-bottom: 62px;
-}
-
-.article-container .small.centered {
-  margin-top: 52px;
 }
 
 .article-container .small img {

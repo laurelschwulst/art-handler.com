@@ -2,12 +2,23 @@
 
   <main class="main article" role="main">
 
+  <!-- <div class="article-container">
+    <div class="text-block">
+      <div class="date-author">
+        <div class="date"><?php echo $page->date("F j, Y") ?></div>
+      </div>
+    </div>
+  </div> -->
+
     <h1><?php echo $page->title()->html() ?></h1>
 
     <div class="article-container">
 
       <div class="text-block">
-        <div class="author">By <?php echo $page->author() ?></div>
+        <div class="date-author">
+          <div class="date"><?php echo $page->date("F j, Y") ?></div>
+          <div class="author">By <?php echo $page->author() ?></div>
+        </div>
       </div>
 
     <?php echo $page->text()->kirbytext() ?>

@@ -14,6 +14,10 @@ fields:
   author:
     label: Author
     type:  author
+  date:
+    label: Date
+    type:  text
+    help: Date format MM/DD/YYYY
   issue:
     label: Issue
     type: radio

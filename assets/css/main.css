@@ -173,30 +173,6 @@ body {
   color: #fff;
 }
 
-/*@media screen and (min-width: 40em) {
-  body {
-
-  }
-  .logo {
-    float: left;
-  }
-  .menu {
-    float: right;
-    margin-right: -1em;
-  }
-  .menu > li {
-    float: left;
-  }
-  .menu > li > a {
-    padding: .35em 1em;
-    border: 0;
-  }
-  .menu > li:hover .submenu {
-    display: block;
-  }
-}*/
-
-
 /* Headings
 -------------------------------------------------- */
 h1 {
@@ -528,6 +504,7 @@ nav a.next, nav a.prev {
   color: #ff221c;
   text-decoration: none;
   padding: 10px 16px;
+  margin-right: 62px;
   background: none;
   cursor: pointer;
 }
@@ -663,18 +640,35 @@ ul.magazine-block {
   /*transition: all .2s ease-in-out;*/
 }
 
+.small {
+  float: none;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: -5.5px;
+}
+
+.small.centered {
+  float: none;
+  display: block;
+  margin: 0 auto;
+}
+
 .article-container {
   margin: 5px;
 }
 
 .article-container img {
-  max-width: 640px;
+  max-width: 780px;
   padding: 5px;
   margin: 0 auto;
 }
 
 .article-container .small {
   margin-bottom: 62px;
+}
+
+.article-container .small.centered {
+  margin-top: 52px;
 }
 
 .article-container .small img {
@@ -932,14 +926,25 @@ body {
 .article-container p {
   color: #fff;
   font-size: 24px;
+  line-height: 1.2;
   max-width: 640px;
+}
+
+.article-container p {
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.25;
+  font-size: 26px;
+  max-width: 780px;
 }
 
 .article-container blockquote p {
   max-width: 100%;
   margin: 1em 72px;
+  line-height: 1.1;
   font-size: 64px;
   text-align: center;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: normal;
 }
 
 .article-container .text-block {
@@ -970,10 +975,18 @@ body {
   margin: 1em auto;
 }
 
-.text-block .author {
+.text-block .date-author {
   color: #000;
   text-align: center;
   margin: 62px auto;
+}
+
+.text-block .date {
+  margin-bottom: 0.2em;
+  font-weight: bold;
+}
+
+.text-block .author {
 }
 
 .footnote { font-size: 15px; }
@@ -991,7 +1004,7 @@ body {
 .footnotes {
   color: #000;
   font-size: 16px;
-  max-width: 640px;
+  max-width: 780px;
   margin: 120px auto;
 }
 
@@ -1026,8 +1039,8 @@ body {
 
   #back-to-top {
     height: 52px;
+    margin-right: 52px;
   }
-
 
   .lb-cancel{
     height: 52px;
@@ -1045,6 +1058,10 @@ body {
     font-size: 72px;
   }
 
+  .article-container blockquote p {
+    font-size: 48px;
+  }
+
   ul.magazine-block,
   .content-block {
     margin-top: 62px;
@@ -1059,10 +1076,6 @@ body {
     width: 33.333333%;
   }
 
-  .text-block,
-  .article-container p {
-    font-size: 21px;
-  }
   .jspVerticalBar{
     width: 72px!important;
   }
@@ -1091,11 +1104,16 @@ body {
 
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 780px) {
 
   nav a {
     float: none;
     text-align: left;
+  }
+
+  .text-block,
+  .article-container p {
+    font-size: 21px;
   }
 
   .marquee { display: none; }

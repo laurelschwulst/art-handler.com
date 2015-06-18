@@ -15,12 +15,24 @@ Author: @viscke
 
 ----
 
-Year: 2014
-
-----
-
 Type: photo essay
 
 ----
 
 Postimage: cody-cover.jpg
+
+----
+
+Date: 
+
+----
+
+Issue: 1
+
+----
+
+Featured: 
+
+----
+
+Coverimage: handinfoam.jpg

@@ -43,3 +43,10 @@ fields:
     filter: cover
     types:
         - image
+  coverimage:
+    label:  Cover Image
+    type:   selector
+    mode:   single
+    filter: cover
+    types:
+        - image

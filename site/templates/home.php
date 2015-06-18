@@ -8,14 +8,14 @@
           <?php foreach(page('magazine')->children()->filterBy('featured', '1', ',')->shuffle()->limit(1) as $project): ?>
             <a href="<?php echo $project->url() ?>">
 
-              <?php if($project->postimage()): ?>
+              <?php if($project->coverimage()): ?>
 
               <?php
-              $filename = $project->postimage();
-              $postimage = $project->files()->find($filename);
+              $filename = $project->coverimage();
+              $coverimage = $project->files()->find($filename);
               ?>
 
-              <img class="special-image" src="<?php echo $postimage->url(); ?>" />
+              <img class="special-image" src="<?php echo $coverimage->url(); ?>" />
 
             <?php endif ?>
 

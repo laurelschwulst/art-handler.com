@@ -41,3 +41,11 @@ Postimage: pillow-cover.png
 ----
 
 Featured: 1
+
+----
+
+Date: 
+
+----
+
+Coverimage: carrying.png

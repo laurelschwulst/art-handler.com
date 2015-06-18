@@ -47,3 +47,11 @@ Issue: 1
 ----
 
 Featured: 1
+
+----
+
+Date: 
+
+----
+
+Coverimage: screen-shot-2015-01-12-at-12.53.19-pm.png

@@ -1,5 +1,6 @@
 # DIRECTORIES
 
-content/**
-assets/avatars/**
-site/accounts/**
+content/
+assets/avatars/
+site/accounts/
+thumbs/

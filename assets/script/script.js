@@ -31,30 +31,36 @@ $(document).ready(function(){
 
   /* Homepage  marquees */
 
-  var randomPercentOne = Math.floor(Math.random()*100);
-  var randomPercentTwo = Math.floor(Math.random()*100);
-  var randomPercentThree = Math.floor(Math.random()*100);
-  var randomPercentFour = Math.floor(Math.random()*100);
-  var randomPercentFive = Math.floor(Math.random()*100);
+  var width = $(window).width();
+  var height = $(window).height();
 
-  var randomSpeedOne = Math.floor(Math.random()*15);
-  var randomSpeedTwo = Math.floor(Math.random()*15);
-  var randomSpeedThree = Math.floor(Math.random()*15);
-  var randomSpeedFour = Math.floor(Math.random()*15);
-  var randomSpeedFive = Math.floor(Math.random()*15);
+  if ($('.marquee').length){
+    $('.marquee').marquee();
+  }
 
-  $('.marquee.one').css("top", randomPercentOne + "%");
-  $('.marquee.two').css("top", randomPercentTwo + "%");
-  $('.marquee.three').css("top", randomPercentThree + "%");
-  $('.marquee.four').css("top", randomPercentFour + "%");
-  $('.marquee.five').css("top", randomPercentFive + "%");
+  var randomVerticalOne = Math.floor(Math.random()*height);
+  var randomVerticalTwo = Math.floor(Math.random()*height);
+  var randomVerticalThree = Math.floor(Math.random()*height);
+  var randomVerticalFour = Math.floor(Math.random()*height);
+  var randomVerticalFive = Math.floor(Math.random()*height);
 
-  $('.marquee.one').children().attr("scrollamount", randomSpeedOne);
-  $('.marquee.two').children().attr("scrollamount", randomSpeedTwo);
-  $('.marquee.three').children().attr("scrollamount", randomSpeedThree);
-  $('.marquee.four').children().attr("scrollamount", randomSpeedFour);
-  $('.marquee.five').children().attr("scrollamount", randomSpeedFive);
+  if (randomVerticalOne < 0 || randomVerticalOne > (height-20)) { randomVerticalOne == 0 }
+  if (randomVerticalTwo < 0 || randomVerticalTwo > (height-20)) { randomVerticalTwo == 0 }
+  if (randomVerticalThree < 0 || randomVerticalThree > (height-20)) { randomVerticalThree == 0 }
+  if (randomVerticalFour < 0 || randomVerticalFour > (height-20)) { randomVerticalFour == 0 }
+  if (randomVerticalFive < 0 || randomVerticalFive > (height-20)) { randomVerticalFive == 0 }
 
+  var randomHorizontalOne = Math.floor(Math.random()*width);
+  var randomHorizontalTwo = Math.floor(Math.random()*width);
+  var randomHorizontalThree = Math.floor(Math.random()*width);
+  var randomHorizontalFour = Math.floor(Math.random()*width);
+  var randomHorizontalFive = Math.floor(Math.random()*width);
+
+  $('.marquee.one').css("top", randomVerticalOne + 72 + "px").css("margin-left", -randomHorizontalOne);
+  $('.marquee.two').css("top", randomVerticalTwo + 72 + "px").css("margin-left", -randomHorizontalTwo);
+  $('.marquee.three').css("top", randomVerticalThree + 72 + "px").css("margin-left", -randomHorizontalThree);
+  $('.marquee.four').css("top", randomVerticalFour + 72 + "px").css("margin-left", -randomHorizontalFour);
+  $('.marquee.five').css("top", randomVerticalFive + 72 + "px").css("margin-left", -randomHorizontalFive);
 
   /* Article scrollbar */
 

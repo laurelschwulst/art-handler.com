@@ -23,33 +23,28 @@
         <?php endforeach ?>
         </div>
       </div>
-
-
-
-
       
       <div id="marquees">
         <div class="marquee one">
-          <marquee>A new magazine on the practice of moving art</marquee>
+          A new magazine on the practice of moving art
         </div>
 
         <div class="marquee two">
-          <marquee>A new magazine on the practice of moving art</marquee>
+          A new magazine on the practice of moving art
         </div>
 
         <div class="marquee three">
-          <marquee>A new magazine on the practice of moving art</marquee>
+          A new magazine on the practice of moving art
         </div>
 
         <div class="marquee four">
-          <marquee>A new magazine on the practice of moving art</marquee>
+          A new magazine on the practice of moving art
         </div>
 
         <div class="marquee five">
-          <marquee>A new magazine on the practice of moving art</marquee>
+          A new magazine on the practice of moving art
         </div>
       </div>
-    -->
 
       <div class="top-bar"></div>
       <div class="bottom-bar"></div>

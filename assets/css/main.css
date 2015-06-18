@@ -990,6 +990,10 @@ body {
   font-weight: bold;
 }
 
+.text-block .issue {
+  font-size: 16px;
+}
+
 .text-block .author {
 }
 
@@ -1120,7 +1124,9 @@ body {
     font-size: 21px;
   }
 
-  .marquee { display: none; }
+  .marquee {
+    display: none;
+  }
 
   ul.magazine-block,
   .content-block,

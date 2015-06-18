@@ -32,6 +32,14 @@ fields:
       photo essay: Photo Essay
       project: Project
     columns: 3
+  topic:
+    label: Topic
+    type: radio
+    options:
+      fashion: Fashion
+      how-to: How-To
+      interviews: Interviews
+    columns: 3
   featured:
     label: Feature
     type: checkbox

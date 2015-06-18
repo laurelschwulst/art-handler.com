@@ -18,6 +18,7 @@
   echo css($cssURI);
 
   echo js('https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js');
+  echo js('assets/script/jquery.marquee.js');
   echo js('assets/script/script.js');
   echo js('assets/script/lightbox.js');
 

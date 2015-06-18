@@ -8,7 +8,9 @@
         <span class="title"><?php echo $project->title()->html() ?></span>
       </div>
       <div class="metadata">
-        <div class="type"><?php echo $project->type() ?></div>
+        <div class="type">
+          <?php echo $project->type() ?><?php if($project->topic()): ?>: <?php echo $project->topic() ?><?php endif ?>
+        </div>
         <div class="byline">by <?php echo $project->author()->html() ?></div>
       </div>
 

@@ -667,6 +667,15 @@ ul.magazine-block {
   margin: 5px;
 }
 
+.article-container a {
+  border-bottom: 1px solid #000;
+}
+
+.article-container a:hover {
+  color: #fff;
+  background: #000;
+}
+
 .article-container figure {
   max-width: 780px;
   margin: 2em auto;

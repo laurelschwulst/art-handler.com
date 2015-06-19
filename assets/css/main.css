@@ -181,7 +181,7 @@ h1 {
   font-weight: 400;
   margin-bottom: .5em;
 }
-h2 {
+/*h2 {
   font-size: 2em;
   line-height: 1.25em;
   font-weight: 300;
@@ -200,11 +200,13 @@ h4 {
   line-height: 1.5em;
   margin-bottom: .5em;
   color: red;
-}
+}*/
 h1 a, h2 a, h3 a, h4 a {
   color: inherit;
   border: 0 !important;
 }
+
+h2, h3, h4 { font-weight: bold; }
 
 
 
@@ -629,7 +631,8 @@ ul.magazine-block {
 }
 
 .grid-col,
-.small {
+.small,
+.fifty {
   float: left;
   margin: 0;
   width: 100%;
@@ -653,6 +656,13 @@ ul.magazine-block {
   margin: 2em auto !important;
 }
 
+.fifty {
+  float: none;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: -5.5px !important;
+}
+
 .article-container {
   margin: 5px;
 }
@@ -670,12 +680,20 @@ ul.magazine-block {
   max-width: 25%;
 }
 
+.article-container figure.fifty {
+  max-width: 50%;
+}
+
 .article-container img {
   max-width: 780px;
   padding: 5px;
 }
 
 .article-container .small img {
+  max-width: 100%;
+}
+
+.article-container .fifty img {
   max-width: 100%;
 }
 
@@ -698,7 +716,7 @@ ul.magazine-block {
 }
 
 .col-full { width: 100%; }
-.col-one-half { width: 50%; }
+.col-one-half, .fifty { width: 50%; }
 .col-one-third { width: 33.333%; }
 .col-two-thirds { width: 66.666%; }
 .col-one-quarter, .small { width: 25%; }
@@ -927,27 +945,33 @@ body {
 }
 
 .text-block,
-.article-container p {
+.article-container p,
+.article-container h2 {
   color: #fff;
   font-size: 24px;
   line-height: 1.2;
   max-width: 640px;
 }
 
-.article-container p {
+.article-container p,
+.article-container h2 {
   font-family: "Times New Roman", Times, serif;
   line-height: 1.25;
   font-size: 26px;
   max-width: 780px;
 }
 
+.article-container h2 {
+  color: #000;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
 .article-container blockquote p {
-  max-width: 100%;
-  margin: 1em 72px;
+  max-width: 780px;
   line-height: 1.1;
-  font-size: 64px;
-  text-align: center;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding-left: 4em;
+  font-size: 21px;
   font-weight: normal;
 }
 
@@ -979,7 +1003,18 @@ body {
   margin: 1em auto;
 }
 
-.text-block .date-author {
+.article-container .outro p {
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.article-container h2 {
+
+}
+
+.text-block .article-metadata {
   color: #000;
   text-align: center;
   margin: 62px auto;
@@ -990,8 +1025,11 @@ body {
   font-weight: bold;
 }
 
-.text-block .issue {
-  font-size: 16px;
+.issue {
+  font-size: 24px;
+  text-align: center;
+  color: #000;
+  margin-bottom: 1em;
 }
 
 .text-block .author {
@@ -1064,10 +1102,6 @@ body {
   .magazine-block h1,
   .article h1 {
     font-size: 72px;
-  }
-
-  .article-container blockquote p {
-    font-size: 48px;
   }
 
   ul.magazine-block,

@@ -9,7 +9,7 @@ $(document).ready(function(){
 
   /* Small images in articles and lightbox */
 
-  var small_images = $('figure.small img');
+  var small_images = $('figure.small img, figure.fifty img');
 
   $(small_images).each(function(){
     var url = $(this).attr('src');

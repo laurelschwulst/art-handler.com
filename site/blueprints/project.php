@@ -11,6 +11,9 @@ fields:
   text:
     label: Text
     type:  textarea
+  outro:
+    label: Outro
+    type:  textarea
   author:
     label: Author
     type:  author

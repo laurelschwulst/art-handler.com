@@ -15,7 +15,7 @@
     <div class="article-container">
 
       <div class="text-block">
-        <div class="date-author">
+        <div class="article-metadata">
           <div class="issue">From Issue No. <?php echo $page->issue() ?></div>
           <div class="date"><?php echo $page->date("F j, Y") ?></div>
           <div class="author">By <?php echo $page->author() ?></div>
@@ -23,6 +23,10 @@
       </div>
 
     <?php echo $page->text()->kirbytext() ?>
+
+    <div class="outro">
+      <?php echo $page->outro()->kirbytext() ?>
+    </div>
 
     </div>
 

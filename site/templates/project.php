@@ -16,6 +16,10 @@
 
     <?php echo $page->text()->kirbytext() ?>
 
+    <div class="outro">
+      <?php echo $page->outro()->kirbytext() ?>
+    </div>
+
     </div>
 
   </main>

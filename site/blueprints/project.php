@@ -38,7 +38,7 @@ fields:
   topic:
     label: Topic
     type: select
-    default: none
+    default: 
     options:
       fashion: Fashion
       how-to: How-To

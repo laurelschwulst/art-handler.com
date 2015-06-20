@@ -775,6 +775,12 @@ ul.magazine-block {
 .grid-col:hover .type { background: none; }
 .grid-col:hover .byline { background: #ff221c; }
 
+.type .topic { font-style: italic; }
+
+.type .topic:before{
+    content: " ";
+}
+
 .grid-col .square img {
   max-width: 100%;
 }

@@ -9,7 +9,10 @@
       </div>
       <div class="metadata">
         <div class="type">
-          <?php echo $project->type() ?><?php if($project->topic()): ?>: <?php echo $project->topic() ?><?php endif ?>
+          <?php echo $project->type() ?>
+          <?php if($topic = $project->topic()): ?>
+            <span class="topic"><?php echo $topic ?></span>
+          <?php endif ?>
         </div>
         <div class="byline">by <?php echo $project->author()->html() ?></div>
       </div>

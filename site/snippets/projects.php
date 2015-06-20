@@ -15,9 +15,10 @@
           <?php endif ?>
         </div>
         <div class="byline">by <?php echo $project->author()->html() ?></div>
+
       </div>
 
-      <?php if($project->postimage()): ?>
+      <?php if($postimage = $project->postimage()->sortBy('sort', 'asc')->first()): ?>
 
         <?php
             $filename = $project->postimage();

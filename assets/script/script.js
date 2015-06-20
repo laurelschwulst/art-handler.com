@@ -17,7 +17,7 @@ $(document).ready(function(){
     $(this).wrap(link);
   });
 
-  var small_image_containers = $('figure.small');
+  var small_image_containers = $('figure.small, figure.fifty');
 
   $(small_image_containers).each(function(){
     var caption = $(this).children('figcaption').html();
@@ -25,7 +25,7 @@ $(document).ready(function(){
     $(link).attr('data-title', caption);
   });
 
-  var last_small_image = $('figure.small').last();
+  var last_small_image = $('figure.small, figure.fifty').last();
   $('<div class="clearer"></div>').insertAfter(last_small_image);
 
 

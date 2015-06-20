@@ -10,7 +10,18 @@
         <div class="article-metadata">
           <div class="issue">From Issue No. <?php echo $page->issue() ?></div>
           <div class="date"><?php echo $page->date("F j, Y") ?></div>
-          <div class="author">By <?php echo $page->author() ?></div>
+
+          
+          <div class="author">
+
+            By
+            <?php foreach($page->author()->split(',') as $author): ?>
+              <span class="author-container"><span class="author"><?php echo $author ?></span></span>
+            <?php endforeach ?>
+
+            <?php echo param('author'); ?>
+
+          </div>
         </div>
       </div>
 

@@ -4,7 +4,7 @@ class AuthorField extends TextField {
 
   static public $assets = array(
     'js' => array(
-      'tags.min.js'
+      'tags.js'
     )
   );
 

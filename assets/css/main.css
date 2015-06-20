@@ -718,6 +718,10 @@ ul.magazine-block {
   margin-bottom: 10px;
 }
 
+.article-container figcaption .footnote {
+  font-size: 10px;
+}
+
 .grid-col.col-full {
   font-size: 36px;
   color: #fff;
@@ -976,6 +980,27 @@ body {
   margin: 0 auto;
 }
 
+.article-container .pullquote {
+  font-size: 64px;
+  color: #000;
+  text-align: center;
+  margin: 1em 72px;
+}
+
+.article-container span.redtext {
+  color: #ff221c;
+  max-width: 780px;
+  margin: 1em auto;
+}
+
+.article-container div.smalltext {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #000;
+  max-width: 780px;
+  margin: 1em auto;
+}
+
 .article-container blockquote p {
   max-width: 780px;
   line-height: 1.1;
@@ -1041,7 +1066,22 @@ body {
   margin-bottom: 1em;
 }
 
-.text-block .author {
+.author-container:not(:last-child):after{
+    content: ",";
+}
+
+.author-container:last-child:before{
+    content: "and ";
+}
+
+.text-block .author a {
+  color: #000;
+  border-bottom: 1px solid black;
+}
+
+.text-block .author a:hover {
+  color: #fff;
+  background: #000;
 }
 
 .footnote { font-size: 15px; }
@@ -1111,6 +1151,10 @@ body {
   .magazine-block h1,
   .article h1 {
     font-size: 72px;
+  }
+
+  .article-container .pullquote {
+    font-size: 48px;
   }
 
   ul.magazine-block,
@@ -1187,6 +1231,9 @@ body {
     margin-top: 1em;
   }
 
+  .article-container .pullquote {
+    font-size: 28px;
+  }
 }
 
 @media screen and (max-width: 600px) {

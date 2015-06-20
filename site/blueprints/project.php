@@ -37,7 +37,8 @@ fields:
     columns: 3
   topic:
     label: Topic
-    type: radio
+    type: select
+    default: none
     options:
       fashion: Fashion
       how-to: How-To
@@ -55,7 +56,7 @@ fields:
     types:
         - image
   coverimage:
-    label:  Cover Image
+    label:  Homepage Cover Image
     type:   selector
     mode:   single
     filter: cover

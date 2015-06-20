@@ -1076,7 +1076,7 @@ body {
     content: ",";
 }
 
-.author-container:last-child:before{
+.author-container:not(:first-child):last-child:before{
     content: "and ";
 }
 

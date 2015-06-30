@@ -10,10 +10,11 @@
               <a href="<?php echo $project->url() ?>">
                 <?php if($project->coverimage()): ?>
                   <?php
-                  $filename = $project->coverimage();
-                  $coverimage = $project->files()->find($filename);
+                    $filename = $project->coverimage();
+                    $coverimage = $project->files()->find($filename);
                   ?>
 
+                  <!-- TODO: Replace with thumb(); -->
                   <img class="special-image" src="<?php echo $coverimage->url(); ?>" />
                 <?php endif; ?>
               </a>

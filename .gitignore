@@ -1,6 +1,5 @@
-# DIRECTORIES
-
-content/**
-assets/avatars/**
-site/accounts/**
-thumbs/**
+.DS_Store
+/site/accounts
+/assets/avatars
+/thumbs/*
+/content/**

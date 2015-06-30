@@ -5,25 +5,23 @@
 
       <div class="image-container-one">
         <div class="image-container-two">
-          <?php foreach(page('magazine')->children()->filterBy('featured', '1', ',')->shuffle()->limit(1) as $project): ?>
-            <a href="<?php echo $project->url() ?>">
+          <?php if($magazine = page('magazine')): ?>
+            <?php foreach(page('magazine')->children()->filterBy('featured', '1', ',')->shuffle()->limit(1) as $project): ?>
+              <a href="<?php echo $project->url() ?>">
+                <?php if($project->coverimage()): ?>
+                  <?php
+                  $filename = $project->coverimage();
+                  $coverimage = $project->files()->find($filename);
+                  ?>
 
-              <?php if($project->coverimage()): ?>
-
-              <?php
-              $filename = $project->coverimage();
-              $coverimage = $project->files()->find($filename);
-              ?>
-
-              <img class="special-image" src="<?php echo $coverimage->url(); ?>" />
-
-            <?php endif ?>
-
-          </a>
-        <?php endforeach ?>
+                  <img class="special-image" src="<?php echo $coverimage->url(); ?>" />
+                <?php endif; ?>
+              </a>
+            <?php endforeach; ?>
+          <?php endif; ?>
         </div>
       </div>
-      
+
       <div id="marquees">
         <div class="marquee one">
           A new magazine on the practice of moving art

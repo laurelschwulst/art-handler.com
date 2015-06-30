@@ -6,7 +6,7 @@
       <div class="image-container-one">
         <div class="image-container-two">
           <?php if($magazine = page('magazine')): ?>
-            <?php foreach(page('magazine')->children()->filterBy('featured', '1', ',')->shuffle()->limit(1) as $project): ?>
+            <?php foreach($magazine->children()->filterBy('featured', '1', ',')->shuffle()->limit(1) as $project): ?>
               <a href="<?php echo $project->url() ?>">
                 <?php if($project->coverimage()): ?>
                   <?php
@@ -14,8 +14,7 @@
                     $coverimage = $project->files()->find($filename);
                   ?>
 
-                  <!-- TODO: Replace with thumb(); -->
-                  <img class="special-image" src="<?php echo $coverimage->url(); ?>" />
+                  <img class="special-image" src="<?php echo thumb($coverimage, array('width' => 1200))->url(); ?>" />
                 <?php endif; ?>
               </a>
             <?php endforeach; ?>

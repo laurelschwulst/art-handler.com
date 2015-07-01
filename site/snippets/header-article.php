@@ -35,8 +35,8 @@
 
     <nav id="top">
       <ul class="menu cf">
-    
-        <a href="../index.php" class="art-handler">ART HANDLER</a>
+
+        <a href="<?php echo $site->url(); ?>" class="art-handler">ART HANDLER</a>
         <?php foreach($pages->visible() as $p): ?>
         <li>
           <a <?php e($p->isOpen(), ' class="current"') ?> href="<?php echo $p->url() ?>"><?php echo $p->title()->html() ?></a>

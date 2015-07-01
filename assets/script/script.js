@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
   /* News item accordion */
 
   $('.news-title').click(function(){
@@ -27,14 +26,4 @@ $(document).ready(function(){
 
   var last_small_image = $('figure.small, figure.fifty').last();
   $('<div class="clearer"></div>').insertAfter(last_small_image);
-
-  /* Article scrollbar */
-
-  /* Article "back to top" link */
-  $('#back-to-top').click(function() {
-    console.log('hi');
-    $('.jspPane').animate({ top: '0'}, 800);
-    $('.jspDrag').animate({ top: '0'}, 800);
-  });
-
 });

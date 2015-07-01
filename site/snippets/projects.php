@@ -16,20 +16,16 @@
         </div>
         <div class="byline">
           by
-          <div class="token-list">
+          <span class="author-container" data-type="short">
             <?php
               foreach($project->author()->split() as $slug):
                 if($author = page('authors')->find($slug)):
             ?>
               <span><?php echo $author->title(); ?></span>
-            <?php
-            else:
-            ?>
+            <?php else: ?>
               <span><?php echo $slug; ?></span>
-            <?php
-              endif;
-              endforeach; ?>
-          </div>
+            <?php endif; endforeach; ?>
+          </span>
         </div>
 
       </div>

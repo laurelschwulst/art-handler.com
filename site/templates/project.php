@@ -11,16 +11,21 @@
           <div class="issue">From Issue No. <?php echo $page->issue() ?></div>
           <div class="date"><?php echo $page->date("F j, Y") ?></div>
 
-          
-          <div class="author">
 
+          <div class="author">
             By
-            <?php foreach($page->author()->split(',') as $author): ?>
-              <span class="author-container"><span class="author"><?php echo $author ?></span></span>
-            <?php endforeach ?>
+            <span class="author-container">
+              <?php
+                foreach($page->author()->split() as $slug):
+                  if($author = page('authors')->find($slug)):
+              ?>
+                <span><a href="<?php echo $author->url(); ?>"><?php echo $author->title(); ?></a></span>
+              <?php else: ?>
+                <span><?php echo $slug; ?></span>
+              <?php endif; endforeach; ?>
+            </span>
 
             <?php echo param('author'); ?>
-
           </div>
         </div>
       </div>

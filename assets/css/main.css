@@ -348,13 +348,6 @@ p {
   margin: 1em 0;
 }
 
-.token-list span:not(:last-child):after {
-  content: ',';
-}
-.token-list span:nth-last-child(2):after {
-  content: ' &';
-}
-
 /* Home
 -------------------------------------------------- */
 
@@ -770,9 +763,6 @@ ul.magazine-block {
   float: left;
   padding: 4px;
 }
-.grid-col .byline .token-list {
-  display: inline;
-}
 
 .grid-col .type { background: #fff; text-transform: capitalize; }
 .grid-col .byline { }
@@ -1082,12 +1072,14 @@ body {
   margin-bottom: 1em;
 }
 
-.author-container:not(:last-child):after{
-    content: ",";
+.author-container span:not(:last-child):after {
+  content: ',';
 }
-
-.author-container:not(:first-child):last-child:before{
-    content: "and ";
+.author-container[data-type="short"] span:nth-last-child(2):after {
+  content: ' &';
+}
+.author-container span:nth-last-child(2):after {
+  content: ' and';
 }
 
 .text-block .author a {

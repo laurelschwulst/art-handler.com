@@ -15,8 +15,12 @@ fields:
     label: Outro
     type:  textarea
   author:
-    label: Author
-    type:  author
+    label: Author(s)
+    type:  checkboxes
+    options: query
+    query:
+      page: authors
+      fetch: children
   date:
     label: Date
     type:  text
@@ -38,7 +42,7 @@ fields:
   topic:
     label: Topic
     type: select
-    default: 
+    default:
     options:
       fashion: Fashion
       how-to: How-To

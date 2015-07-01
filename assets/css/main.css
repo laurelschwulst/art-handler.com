@@ -727,12 +727,14 @@ ul.magazine-block .grid-col[data-has-image="false"]:hover .byline {
   max-width: 100%;
 }
 
-.article-container figcaption {
+.article-container figcaption p {
   font-size: 16px;
   line-height: 1.2;
   color: #000;
   padding: 0 5px;
+  margin-top: 0;
   margin-bottom: 10px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .article-container figcaption .footnote {

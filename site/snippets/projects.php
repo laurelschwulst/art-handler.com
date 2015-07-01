@@ -22,8 +22,8 @@
       <div class="metadata">
         <div class="type">
           <?php echo $project->type() ?>
-          <?php if($topic = $project->topic()): ?>
-            <span class="topic"><?php echo $topic ?></span>
+          <?php if(!$project->topic()->empty()): ?>
+            <span class="topic"><?php echo $project->topic(); ?></span>
           <?php endif ?>
         </div>
         <div class="byline">

@@ -2,8 +2,8 @@
   $(document).ready(function() {
     var $container = $('#marquees');
     var $marquees = $container.find('.marquee');
-    var minTime = 2500;
-    var maxTime = 10000;
+    var minTime = 5000;
+    var maxTime = 28000;
 
     var cycle = function(el, time) {
       $(el).transition({

@@ -21,8 +21,7 @@
       $(this)
         .empty()
         .css({
-          top: 'calc(' + (Math.random() * 100) + '% - ' + $(this).height() + 'px)',
-          left: (Math.random() * 100) + '%'
+          top: 'calc(' + (Math.random() * 100) + '% - ' + $(this).height() + 'px)'
         })
         .append($text.clone())
         .append($text.clone());

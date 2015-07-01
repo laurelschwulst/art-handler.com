@@ -7,7 +7,7 @@
 
     var cycle = function(el, time) {
       $(el).transition({
-        x: '-100vw'
+        x: '-50%'
       }, time, 'linear', function() {
         $(el).css({ x: 0 });
         cycle(el, time);

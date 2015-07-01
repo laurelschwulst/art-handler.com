@@ -26,20 +26,21 @@
             <span class="topic"><?php echo $project->topic(); ?></span>
           <?php endif ?>
         </div>
-        <div class="byline">
-          by
-          <span class="author-container" data-type="short">
-            <?php
-              foreach($project->author()->split() as $slug):
-                if($author = page('authors')->find($slug)):
-            ?>
-              <span><?php echo $author->title(); ?></span>
-            <?php else: ?>
-              <span><?php echo $slug; ?></span>
-            <?php endif; endforeach; ?>
-          </span>
-        </div>
-
+        <?php if(!$project->author()->empty()): ?>
+          <div class="byline">
+            by
+            <span class="author-container" data-type="short">
+              <?php
+                foreach($project->author()->split() as $slug):
+                  if($author = page('authors')->find($slug)):
+              ?>
+                <span><?php echo $author->title(); ?></span>
+              <?php else: ?>
+                <span><?php echo $slug; ?></span>
+              <?php endif; endforeach; ?>
+            </span>
+          </div>
+        <?php endif; ?>
       </div>
 
       <div class="image">

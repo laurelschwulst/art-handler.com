@@ -14,7 +14,23 @@
             <span class="topic"><?php echo $topic ?></span>
           <?php endif ?>
         </div>
-        <div class="byline">by <?php echo $project->author()->html() ?></div>
+        <div class="byline">
+          by
+          <div class="token-list">
+            <?php
+              foreach($project->author()->split() as $slug):
+                if($author = page('authors')->find($slug)):
+            ?>
+              <span><?php echo $author->title(); ?></span>
+            <?php
+            else:
+            ?>
+              <span><?php echo $slug; ?></span>
+            <?php
+              endif;
+              endforeach; ?>
+          </div>
+        </div>
 
       </div>
 

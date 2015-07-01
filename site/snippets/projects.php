@@ -3,7 +3,7 @@
     <h1><?php echo $page->title() ?></h1>
     <?php foreach(page('magazine')->children()->visible() as $project): ?>
     <a href="<?php echo $project->url() ?>" class="grid-col col-one-quarter">
-      <div class="square"><img src="assets/images/square-invisible.svg"></div>
+      <div class="square"><img src="<?php echo url('assets/images/square-invisible.svg'); ?>"></div>
       <div class="title-container">
         <span class="title"><?php echo $project->title()->html() ?></span>
       </div>

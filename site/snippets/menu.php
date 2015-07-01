@@ -5,7 +5,8 @@
     <a href="<?php echo $site->url(); ?>" class="art-handler">ART HANDLER</a>
     <?php foreach($pages->visible() as $p): ?>
     <li>
-      <a <?php e($p->isOpen(), ' class="current"') ?> href="<?php echo $p->url() ?>"><?php echo $p->title()->html() ?></a>
+      <?php $is_author_page = $page->parent()->slug() == 'authors' && $p->slug() == 'magazine'; ?>
+      <a <?php e($p->isOpen() || $is_author_page, ' class="current"') ?> href="<?php echo $p->url() ?>"><?php echo $p->title()->html() ?></a>
 
       <?php if($p->hasVisibleChildren()): ?>
       <ul class="submenu">

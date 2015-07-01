@@ -1,7 +1,19 @@
 <ul class="magazine-block">
   <div class="grid-wrap">
-    <h1><?php echo $page->title() ?></h1>
-    <?php foreach(page('magazine')->children()->visible() as $project): ?>
+    <h1>Magazine</h1>
+
+    <?php if(isset($author) && $author_page = page('authors')->find($author)): ?>
+      <h2>Filter: <?php echo $author_page->title(); ?></h2>
+    <?php endif; ?>
+
+    <?php
+      $articles = page('magazine')->children()->visible();
+      if(isset($author)):
+        $articles = $articles->filterBy('author', '*=', $author);
+      endif;
+    ?>
+
+    <?php foreach($articles as $project): ?>
     <a href="<?php echo $project->url() ?>" class="grid-col col-one-quarter">
       <div class="square"><img src="<?php echo url('assets/images/square-invisible.svg'); ?>"></div>
       <div class="title-container">

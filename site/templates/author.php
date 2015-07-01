@@ -6,7 +6,7 @@
       <?php echo $page->text()->kirbytext() ?>
     </div>
 
-    <?php snippet('projects'); ?>
+    <?php snippet('projects', array('author' => $page->slug())); ?>
 
   </main>
 

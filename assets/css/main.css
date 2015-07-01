@@ -624,6 +624,20 @@ ul.magazine-block {
   font-size: 24px;
 }
 
+ul.magazine-block .grid-col[data-has-image="false"] .title,
+ul.magazine-block .grid-col[data-has-image="false"] .byline,
+ul.magazine-block .grid-col[data-has-image="false"]:hover .type {
+  color: #fff;
+}
+ul.magazine-block .grid-col[data-has-image="false"]:hover .title,
+ul.magazine-block .grid-col[data-has-image="false"] .type,
+ul.magazine-block .grid-col[data-has-image="false"]:hover .byline {
+  color: #ff221c;
+}
+ul.magazine-block .grid-col[data-has-image="false"]:hover .byline {
+  background: #fff;
+}
+
 .grid-wrap {
   margin: 0;
   overflow: hidden;

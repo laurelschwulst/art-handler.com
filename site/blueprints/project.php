@@ -38,6 +38,7 @@ fields:
       article: Article
       photo essay: Photo Essay
       project: Project
+      feature: Feature
     columns: 3
   topic:
     label: Topic
@@ -47,6 +48,9 @@ fields:
       fashion: Fashion
       how-to: How-To
       interviews: Interviews
+      food: Food
+      art: Art
+      review: Review
     columns: 3
   featured:
     label: Feature

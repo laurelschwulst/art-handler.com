@@ -597,6 +597,10 @@ table.home {
 }
 
 #marquees {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
 }
 .marquee {
   position: fixed;

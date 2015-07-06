@@ -82,8 +82,30 @@ kirbytext::$tags['image'] = array(
       ));
     };
 
+    // thumb builder
+    $_thumb = function($class) use($tag, $url, $alt, $title) {
+      $thumb_opts = array();
+      $classes = explode(' ', $tag->attr('class'));
+
+      if(in_array('small', $classes)) $thumb_opts['width'] = 320;
+      if(in_array('medium', $classes)) $thumb_opts['width'] = 640;
+      if(in_array('fifty', $classes)) $thumb_opts['width'] = 640;
+      if(in_array('large', $classes)) $thumb_opts['width'] = 1200;
+
+      $file = $tag->file($tag->attr('image'));
+      $thumb = thumb($file, $thumb_opts);
+
+      return html::img($thumb->url(), array(
+        'width'  => $tag->attr('width'),
+        'height' => $tag->attr('height'),
+        'class'  => $class,
+        'title'  => $title,
+        'alt'    => $alt
+      ));
+    };
+
     if(kirby()->option('kirbytext.image.figure') or !empty($caption)) {
-      $image  = $_link($_image($tag->attr('imgclass')));
+      $image  = $_link($_thumb($tag->attr('imgclass')));
       $figure = new Brick('figure');
       $figure->addClass($tag->attr('class'));
       $figure->append($image);

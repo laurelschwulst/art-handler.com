@@ -18,10 +18,14 @@
       var text = $(this).text();
       var $text = $('<div class="text" />').text(text);
 
+      var minPos = 10;
+      var maxPos = 95;
+      var position = minPos + (Math.random() * (maxPos - minPos));
+
       $(this)
         .empty()
         .css({
-          top: 'calc(' + (Math.random() * 100) + '% - ' + $(this).height() + 'px)'
+          top: 'calc(' + position + '% - ' + $(this).height() + 'px)'
         })
         .append($text.clone())
         .append($text.clone());

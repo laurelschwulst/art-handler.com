@@ -1,21 +1,16 @@
 $(document).ready(function(){
   var $scrollPane = $('body.article');
 
-  if($(window).width() < 1126) {
-    $scrollPane.jScrollPane({
-      verticalDragMinHeight: 72,
-      verticalDragMaxHeight: 72,
-      horizontalDragMinWidth: 0,
-      horizontalDragMaxWidth: 0
-    });
-  } else {
-    $scrollPane.jScrollPane({
-      verticalDragMinHeight: 82,
-      verticalDragMaxHeight: 82,
-      horizontalDragMinWidth: 0,
-      horizontalDragMaxWidth: 0
-    });
-  }
+  var verticalMax = ($(window).width() < 1126) ? 72 : 82;
+  var animateDuration = 1200;
+
+  $scrollPane.jScrollPane({
+    verticalDragMinHeight: verticalMax,
+    verticalDragMaxHeight: verticalMax,
+    horizontalDragMinWidth: 0,
+    horizontalDragMaxWidth: 0,
+    animateDuration: animateDuration
+  });
 
   var jsp = $scrollPane.data('jsp');
 

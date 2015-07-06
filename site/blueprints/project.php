@@ -18,6 +18,7 @@ fields:
     label: Author(s)
     type:  checkboxes
     options: query
+    help: To add a new author, create a page for them under the "Authors" page
     query:
       page: authors
       fetch: children

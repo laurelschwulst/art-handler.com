@@ -10,8 +10,14 @@
       $articles = page('magazine')->children()->visible();
       if(isset($author)):
         $articles = $articles->filterBy('author', '*=', $author);
+      elseif(isset($query)):
+        $articles = $articles->search($query);
       endif;
     ?>
+
+    <?php if(isset($query)): ?>
+      <h2><?php echo $articles->count(); ?> Result<?php if($articles->count() !== 1) echo 's'; ?></h2>
+    <?php endif; ?>
 
     <?php foreach($articles as $project): ?>
     <a href="<?php echo $project->url() ?>" class="grid-col col-one-quarter" data-has-image="<?php echo $project->postimage()->empty() ? 'false' : 'true'; ?>">

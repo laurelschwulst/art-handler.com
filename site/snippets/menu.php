@@ -29,4 +29,7 @@
     <a href="http://instagram.com/arthandlermag/"><li class="instagram"></li></a>
   </ul>
 
+  <form id="search" action="<?php echo url('search'); ?>" method="get">
+    <input type="text" placeholder="Search" name="q" value="<?php echo get('q'); ?>" />
+  </form>
 </nav>

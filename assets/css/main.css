@@ -474,6 +474,32 @@ nav a {
   height: 62px;
 }
 
+#search {
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+}
+#search input {
+  background: none;
+  color: white;
+  font: inherit;
+  outline: none;
+  text-align: right;
+  padding: 10px;
+}
+#search input::-webkit-input-placeholder {
+  color: white;
+  opacity: 0.5;
+}
+#search input:-ms-input-placeholder {
+  color: white;
+  opacity: 0.5;
+}
+#search input::-moz-placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
 nav a:hover {
   background: #ff221c;
   color: #fff;
@@ -1276,6 +1302,10 @@ body {
   .article-container .pullquote {
     font-size: 28px;
   }
+}
+
+#search {
+
 }
 
 @media screen and (max-width: 600px) {

@@ -783,7 +783,8 @@ ul.magazine-block .grid-col[data-has-image="false"]:hover .byline {
   max-width: 100%;
 }
 
-.article-container figcaption p {
+.article-container figcaption p,
+.content-block figcaption p {
   font-size: 16px;
   line-height: 1.2;
   color: #000;
@@ -1027,6 +1028,15 @@ body {
 .content-block a:hover {
   background: #fff;
   color: #ff221c;
+}
+
+.content-block figure {
+  margin: 1em 0;
+}
+
+.content-block figcaption p {
+  color: white;
+  margin: 1em 0;
 }
 
 .content-block h1,

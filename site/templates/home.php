@@ -38,10 +38,6 @@
         <div class="marquee four">
           A new magazine on the practice of moving art
         </div>
-
-        <div class="marquee five">
-          A new magazine on the practice of moving art
-        </div>
       </div>
 
       <div class="top-bar"></div>

@@ -732,6 +732,10 @@ ul.magazine-block .grid-col[data-has-image="false"]:hover .byline {
   margin: 2em auto !important;
 }
 
+.article-container .large.centered img {
+  margin: 0 auto;
+}
+
 .article-container {
   margin: 5px;
 }

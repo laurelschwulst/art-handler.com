@@ -28,4 +28,11 @@ $(document).ready(function(){
   var last_small_image = $('figure.small, figure.fifty').last();
   $('<div class="clearer"></div>').insertAfter(last_small_image);
 
+  /* Search toggle */
+
+  $('li.search').click(function(){
+    $('#search').slideToggle('fast');
+    // $('ul.magazine-block, .content-block').css("margin-top", "200px");
+  });
+
 });

@@ -1,4 +1,4 @@
-<body class="home gradient">
+<body class="home">
 
   <?php snippet('header') ?>
     <main>

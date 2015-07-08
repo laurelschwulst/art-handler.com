@@ -27,9 +27,11 @@
     <a href="http://twitter.com/ArtHandlerMag"><li class="twitter"></li></a>
     <a href="http://art-handler.tumblr.com"><li class="tumblr"></li></a>
     <a href="http://instagram.com/arthandlermag/"><li class="instagram"></li></a>
+    <a href="#" class="search"><li class="search"></li></a>
   </ul>
 
   <form id="search" action="<?php echo url('search'); ?>" method="get">
-    <input type="text" placeholder="Search" name="q" value="<?php echo get('q'); ?>" />
+    <input type="text" placeholder="Search" name="q" autocomplete="off" value="<?php echo get('q'); ?>" />
   </form>
+
 </nav>

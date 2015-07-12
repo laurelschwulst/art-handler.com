@@ -1401,7 +1401,9 @@ body {
   }
 
   .text-block,
-  .article-container p {
+  .text-block .article-metadata,
+  .article-container p,
+  .article-container h2 {
     font-size: 21px;
   }
 

@@ -801,6 +801,7 @@ ul.magazine-block .grid-col[data-has-image="false"]:hover .byline {
 .article-container img {
   max-width: 780px;
   padding: 5px;
+  margin: 0 auto;
 }
 
 .article-container .small img {
@@ -1191,7 +1192,6 @@ body {
 }
 
 .issue {
-  font-size: 24px;
   text-align: center;
   color: #000;
   margin-bottom: 1em;
@@ -1323,6 +1323,20 @@ body {
     margin: 0;
   }
 
+  nav #social {
+    display: none;
+  }
+
+  ul#social.mobile {
+    display: block;
+  }
+
+}
+
+@media screen and (max-width: 840px) {
+  .footnotes {
+    margin: 120px 26px;
+  }
 }
 
 @media screen and (max-width: 824px) {
@@ -1330,14 +1344,6 @@ body {
   .col-one-quarter,
   .small {
     width: 50%;
-  }
-
-  nav #social {
-    display: none;
-  }
-
-  ul#social.mobile {
-    display: block;
   }
 
 }

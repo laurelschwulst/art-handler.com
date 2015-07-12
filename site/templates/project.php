@@ -47,8 +47,4 @@
 
   <div class="clearer"></div>
 
-  <div class="article-footer">
-    <div id="back-to-top" href="#top">Back to Top</div>
-  </div>
-
-<?php snippet('footer') ?>
+<?php snippet('footer-article') ?>

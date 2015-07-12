@@ -288,6 +288,25 @@ h2, h3, h4 { font-weight: bold; }
   float: right;
   margin-right: 10px;
 }
+.nextprev.mobile {
+  display: none;
+}
+.nextprev.mobile .prev,
+.nextprev.mobile .next {
+  float: left;
+}
+.nextprev.mobile .next {
+  margin: 0;
+}
+.nextprev.mobile a {
+  font-size: 36px;
+  color: #ff221c;
+  padding: 10px 16px;
+}
+.nextprev.mobile a:hover {
+  color: #fff;
+  background: #ff221c;
+}
 
 
 /* Footer
@@ -609,6 +628,19 @@ ul#social a li.search {
   background: #fda8a6;
   border-radius: 9px;
   background-size: 18px 18px;
+}
+
+ul#social.mobile {
+  display: none;
+  clear: both;
+  position: static;
+  margin: 10px;
+}
+
+ul#social.mobile a {
+  float: left;
+  margin-bottom: 72px;
+  margin-top: 10px;
 }
 
 body.home ul#social {
@@ -1230,7 +1262,8 @@ body {
   .news-block h2,
   .news-block .news-date,
   #back-to-top,
-  #search {
+  #search,
+  .nextprev.mobile a {
     font-size: 28px !important;
   }
 
@@ -1259,11 +1292,6 @@ body {
     font-size: 48px;
   }
 
-  /*ul.magazine-block,
-  .content-block {
-    margin-top: 62px;
-  }*/
-
   .nextprev {
     margin-right: 52px;
   }
@@ -1277,7 +1305,7 @@ body {
     width: 72px!important;
   }
 
-  .jspDrag{
+  .jspDrag {
       height: 52px!important;
   }
 }
@@ -1285,6 +1313,15 @@ body {
 @media screen and (max-width: 950px) {
 
   .nextprev { display: none; }
+
+  .nextprev.mobile {
+    display: block;
+  }
+
+  #back-to-top {
+    float: left;
+    margin: 0;
+  }
 
 }
 
@@ -1297,6 +1334,10 @@ body {
 
   nav #social {
     display: none;
+  }
+
+  ul#social.mobile {
+    display: block;
   }
 
 }
@@ -1312,46 +1353,68 @@ body {
     margin-right: 10px;
   }
 
-  .text-block,
-  .article-container p {
-    font-size: 21px;
-  }
-
   .marquee {
     display: none;
   }
 
-  /*ul.magazine-block,
-  .content-block,
   .image-container-two {
     margin-top: 270px;
-  }*/
-
-  main.article {
-    margin-top: 310px;
   }
 
   .article h1 {
     font-size: 54px;
-    margin: auto;
+    margin: 10px;
     margin-top: 1em;
   }
 
   .article-container .pullquote {
     font-size: 28px;
+    margin: 0.5em 10px;
   }
 
-  #search {
-  display: none !important;
+  .article-container blockquote p {
+    padding-left: 2em;
+  }
+
+  .article-container figure.small {
+    max-width: 50%;
   }
 
 }
 
 @media screen and (max-width: 600px) {
 
+  .col-one-quarter,
+  .small {
+    width: 100%;
+  }
+
+  .article-container img,
+  .article-container figure.small,
+  .article-container figure.medium,
+  .article-container figure.fifty {
+    max-width: 100%;
+  }
+
   .news-date {
     display: none;
   }
+
+  .text-block,
+  .article-container p {
+    font-size: 21px;
+  }
+
+  .article-container blockquote p {
+    font-size: 18px;
+    padding-left: 2em;
+    margin-left: 1em;
+  }
+
+  .article-container blockquote p sup {
+    font-size: 12px;
+  }
+
 }
 
 @media screen and (max-width: 500px) {

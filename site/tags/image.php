@@ -53,9 +53,9 @@ kirbytext::$tags['image'] = array(
 
       // build the href for the link
       if($link == 'self') {
-        $href = $url;
+        $href = thumb($file, array('width' => 1920))->url();
       } else if($file and $link == $file->filename()) {
-        $href = $file->url();
+        $href = thumb($file, array('width' => 1920))->url();
       } else if($tag->file($link)) {
         $href = $tag->file($link)->url();
       } else {

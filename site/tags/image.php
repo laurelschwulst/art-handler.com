@@ -87,10 +87,10 @@ kirbytext::$tags['image'] = array(
       $thumb_opts = array();
       $classes = explode(' ', $tag->attr('class'));
 
-      if(in_array('small', $classes)) $thumb_opts['width'] = 320;
-      if(in_array('medium', $classes)) $thumb_opts['width'] = 640;
-      if(in_array('fifty', $classes)) $thumb_opts['width'] = 640;
-      if(in_array('large', $classes)) $thumb_opts['width'] = 1200;
+      if(in_array('small', $classes)) $thumb_opts['width'] = 640;
+      if(in_array('medium', $classes)) $thumb_opts['width'] = 1280;
+      if(in_array('fifty', $classes)) $thumb_opts['width'] = 1280;
+      if(in_array('large', $classes)) $thumb_opts['width'] = 1920;
 
       $file = $tag->file($tag->attr('image'));
       $thumb = thumb($file, $thumb_opts);

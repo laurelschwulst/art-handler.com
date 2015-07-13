@@ -10,12 +10,14 @@ $(document).ready(function(){
 
   var small_images = $('figure.small img, figure.medium img, figure.large img, figure.fifty img');
 
-  $(small_images).each(function() {
-    var $link = $(this).parent('a');
-    if($link.length) {
-      $link.attr('data-lightbox', 'set');
-    }
-  });
+  if(window.matchMedia('(min-width: 780px)').matches) {
+    $(small_images).each(function() {
+      var $link = $(this).parent('a');
+      if($link.length) {
+        $link.attr('data-lightbox', 'set');
+      }
+    });
+  }
 
   var small_image_containers = $('figure.small, figure.medium, figure.large, figure.fifty');
 

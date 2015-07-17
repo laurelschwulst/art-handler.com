@@ -47,4 +47,6 @@
 
     </main>
 
+  <?php snippet('footer') ?>
+
 </body>

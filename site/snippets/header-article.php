@@ -62,6 +62,7 @@
   <header>
 
     <nav id="top">
+
       <ul class="menu cf">
 
         <a href="<?php echo $site->url(); ?>" class="art-handler">ART HANDLER</a>
@@ -94,5 +95,9 @@
       </ul>
 
     </nav>
+
+    <form id="search" action="<?php echo url('search'); ?>" method="get">
+    <input type="text" placeholder="Search" name="q" autocomplete="off" value="<?php echo get('q'); ?>" />
+  </form>
 
   </header>

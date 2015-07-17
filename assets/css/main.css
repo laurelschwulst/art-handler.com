@@ -1378,7 +1378,9 @@ div.video-container {width: 100%; padding-bottom: 56%; padding-top: 30px; height
 
   .footnotes,
   .article-container figcaption p,
-  .content-block figcaption p {
+  .content-block figcaption p,
+  .article-container .outro p,
+  .article-container div.smalltext  {
     font-size: 14px;
   }
 
@@ -1438,6 +1440,11 @@ div.video-container {width: 100%; padding-bottom: 56%; padding-top: 30px; height
     margin-top: 1em;
   }
 
+  .article-footer {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .article-container p {
     margin-left: 10px;
     margin-right: 10px;
@@ -1466,6 +1473,10 @@ div.video-container {width: 100%; padding-bottom: 56%; padding-top: 30px; height
     padding: 0 20px;
   }
 
+  #back-to-top {
+    display: none;
+  }
+  
 }
 
 @media screen and (max-width: 600px) {

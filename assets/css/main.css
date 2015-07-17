@@ -1341,21 +1341,17 @@ div.video-container {width: 100%; padding-bottom: 56%; padding-top: 30px; height
     display: block;
   }
 
+  .col-one-quarter,
+  .small {
+    width: 50%;
+  }
+
 }
 
 @media screen and (max-width: 840px) {
   .footnotes {
     margin: 120px 26px;
   }
-}
-
-@media screen and (max-width: 824px) {
-
-  .col-one-quarter,
-  .small {
-    width: 50%;
-  }
-
 }
 
 @media screen and (max-width: 780px) {
@@ -1445,7 +1441,8 @@ div.video-container {width: 100%; padding-bottom: 56%; padding-top: 30px; height
     margin-right: 0;
   }
 
-  .article-container p {
+  .article-container p,
+  .article-container h2 {
     margin-left: 10px;
     margin-right: 10px;
   }
@@ -1476,7 +1473,7 @@ div.video-container {width: 100%; padding-bottom: 56%; padding-top: 30px; height
   #back-to-top {
     display: none;
   }
-  
+
 }
 
 @media screen and (max-width: 600px) {

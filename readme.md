@@ -1,4 +1,4 @@
-arthandler.com
+art-handler.com
 ======================
 This is a website for a magazine about art handling.
 
